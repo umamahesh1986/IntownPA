@@ -1,0 +1,85 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": "Outfit",
+    "body": "Manrope",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl font-bold tracking-tight text-slate-900",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight text-slate-900",
+      "h3": "text-xl font-semibold text-slate-900",
+      "body": "text-base font-normal text-slate-700",
+      "small": "text-sm text-slate-500",
+      "overline": "text-xs font-bold uppercase tracking-wider text-slate-500"
+    }
+  },
+  "colors": {
+    "primary": "#F97316",
+    "primary_hover": "#EA580C",
+    "primary_light": "#FFF7ED",
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "surface_secondary": "#F1F5F9",
+    "text_main": "#020617",
+    "text_muted": "#64748B",
+    "border": "#E2E8F0",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "visual_enhancers": {
+    "border_radius": "rounded-2xl for cards and modals, rounded-full for action buttons, rounded-xl for inner elements",
+    "shadows": "shadow-sm for default surfaces, shadow-md for interactive cards on hover, shadow-xl for modals/bottom sheets",
+    "spacing": "Use comfortable mobile-friendly spacing. p-4 to p-6 inside cards. gap-4 between list items."
+  },
+  "components": {
+    "cards": "White background, rounded-2xl, border border-slate-200. Padding p-4 or p-5. Clean and uncrowded.",
+    "buttons": "Primary buttons should be highly prominent: bg-orange-500 text-white rounded-full font-semibold px-6 py-3.5 shadow-sm active:scale-95. Secondary buttons: bg-slate-100 text-slate-900 rounded-full.",
+    "bottom_nav": "Fixed at the bottom. bg-white border-t border-slate-200 flex justify-around items-center h-16 pb-safe z-50.",
+    "header": "Sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100. DO NOT leave transparent if content scrolls beneath.",
+    "status_timeline": "Vertical line with dots. Active state dot in primary orange, completed in success green, pending in slate-300.",
+    "comparison_card": "Side-by-side flex layout. Clear distinct borders. 'Approve' button clearly marked in green.",
+    "chat_bubble": "Customer messages: bg-slate-100 rounded-2xl rounded-tr-sm text-slate-800. PA messages: bg-orange-100 rounded-2xl rounded-tl-sm text-orange-900."
+  },
+  "layouts": {
+    "customer_app": "Mobile-first approach. Use a container like max-w-md mx-auto min-h-screen bg-slate-50 relative overflow-x-hidden for web-view simulation.",
+    "pa_app": "Mobile-first approach. max-w-md mx-auto min-h-screen bg-slate-50 relative.",
+    "admin_dashboard": "Desktop layout. grid grid-cols-[250px_1fr] min-h-screen bg-slate-50. Fixed sidebar with dark or light theme, main content area with ample p-8 padding."
+  },
+  "motion": {
+    "hover": "transition-colors duration-200 ease-in-out",
+    "active": "active:scale-[0.98] transition-transform",
+    "entrance": "animate-in fade-in slide-in-from-bottom-4 duration-300",
+    "page_transition": "Use Framer Motion for smooth screen transitions if possible, or basic CSS fade."
+  },
+  "accessibility": {
+    "contrast": "Text must meet 4.5:1 ratio. Do not use white text on light orange. Ensure the primary orange (#F97316) is used with white text only if contrast is sufficient, else use darker orange.",
+    "touch_targets": "Minimum 48x48px for all clickable areas.",
+    "focus": "focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2",
+    "aria_labels": "Ensure all icons have descriptive aria-labels if they are buttons."
+  },
+  "media": {
+    "icons": "lucide-react for consistent, clean vector icons. Stroke width 2.",
+    "image_urls": {
+      "local_market": {
+        "url": "https://images.unsplash.com/photo-1697425206245-250e9c651119?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBsb2NhbCUyMG1hcmtldHxlbnwwfHx8fDE3OTA5Njc2ODJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Indian local market scene, for service category or banner."
+      },
+      "delivery_person": {
+        "url": "https://images.unsplash.com/photo-1725026455189-7e98b43d3dfa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxkZWxpdmVyeSUyMHBlcnNvbiUyMGluZGlhfGVufDB8fHx8MTc5MDk2NzY4OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Delivery person in India, useful for PA profile or hero section."
+      }
+    }
+  },
+  "instructions_to_main_agent": "Build the IntownPA MVP interfaces (Customer App, PA App, Admin Dashboard). Use a mobile-width wrapper for the customer/PA app views to mimic mobile on desktop browsers. Implement 'Show Me Before You Buy' feature UI as a core component in the chat/task detail. Build the Multi-step Booking flow with clear progressive disclosure. Admin dashboard should feature data tables for PA management and task tracking. strictly follow the saffron orange and white color scheme to evoke a trustworthy Indian brand. Include Telugu translation placeholders if necessary, though English is primary.",
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Create new components that match the style and conventions of existing ones.",
+    "Do not apply 'transition: all'. Target specific properties (e.g., 'transition-colors').",
+    "Do not use transparent backgrounds for sticky headers or dropdowns.",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='book-pa-button').",
+    "Never use AI assistant emoji characters like 🤖🧠.",
+    "Use Lucide-react for all iconography.",
+    "For toasts, utilize the sonner library.",
+    "Create depth with appropriate shadows and clean borders, avoiding 'AI slop' uniform gradients."
+  ]
+}
